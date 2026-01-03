@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.game-container {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    align-items: flex-start;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 250px;
+}
+
+.game-info h1 {
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, #00f0f0, #f0f000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+}
+
+.score-board {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.score-board > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.score-board span:last-child {
+    font-weight: bold;
+    color: #00f0f0;
+}
+
+.next-piece {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.next-piece h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#next-canvas {
+    background: #111;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+.controls {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.controls h3 {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.controls p {
+    margin: 3px 0;
+    font-size: 12px;
+    color: #ccc;
+    line-height: 1.3;
+}
+
+#start-btn {
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #00f0f0, #0080ff);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 128, 255, 0.3);
+}
+
+#start-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 128, 255, 0.5);
+}
+
+#start-btn:active {
+    transform: translateY(0);
+}
+
+.game-board {
+    position: relative;
+}
+
+#tetris-canvas {
+    background: #111;
+    border: 3px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+#fireworks-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+/* 업데이트 알림 스타일 */
+.update-notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.update-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.update-content h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.update-content p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.update-progress {
+    margin: 15px 0;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #34495e;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+.update-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.update-actions button {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#update-install-btn {
+    background-color: #27ae60;
+    color: white;
+}
+
+#update-install-btn:hover {
+    background-color: #229954;
+}
+
+#update-later-btn {
+    background-color: #7f8c8d;
+    color: white;
+}
+
+#update-later-btn:hover {
+    background-color: #5d6d7e;
+}
+
+.game-container {
+    flex-direction: row !important;
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        flex-direction: row !important;
+        gap: 20px;
+    }
+    
+    .game-info {
+        min-width: 200px;
+    }
+}
