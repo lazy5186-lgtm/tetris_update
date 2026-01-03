@@ -29,14 +29,14 @@
     "ttj"
   ],
   "author": {
-    "name": "이름",
-    "email": "이메일@gmail.com"
+    "name": "globping",
+    "email": "globping@gmail.com"
   },
   "license": "MIT",
   "description": "TTJ Electron Basic Application Template",
   "repository": {
     "type": "git",
-    "url": "https://깃URL입력해주세요"
+    "url": "https://github.com/lazy5186-lgtm/tetris_update.git"
   },
   "devDependencies": {
     "electron": "^37.2.3",
@@ -177,8 +177,8 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "입력해주세요",
-      "repo": "입력해주세요",
+      "owner": "lazy5186-lgtm",
+      "repo": "tetris_update",
       "releaseType": "release"
     }
   },
